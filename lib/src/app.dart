@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'auth/auth_store.dart';
+import 'screens/business_workspace_screen.dart';
 import 'screens/first_product_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/onboarding_screen.dart';
-import 'screens/pro_workspace_screen.dart';
 
 class KisimbaApp extends StatelessWidget {
   const KisimbaApp({super.key, required this.authStore});
@@ -62,7 +62,7 @@ void openFirstProduct(BuildContext context, LocalAccount account) {
 
 void openWorkspace(BuildContext context, LocalAccount account) {
   Navigator.of(context).pushAndRemoveUntil(
-    MaterialPageRoute(builder: (_) => ProWorkspaceScreen(account: account)),
+    MaterialPageRoute(builder: (_) => BusinessWorkspaceScreen(account: account)),
     (_) => false,
   );
 }
