@@ -15,18 +15,17 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   static const _types = [
-    'Alimentation',
-    'Boutique',
-    'Kiosque',
+    'Boutique / Alimentation',
     'Dépôt de boissons',
+    'Take-away / Restaurant',
+    'Perruques & Articles femme',
+    'Habillement mixte & Bijoux',
     'Pharmacie',
-    'Quincaillerie',
-    'Habillement',
-    'Restaurant',
-    'Téléphones et accessoires',
     'Cosmétique',
+    'Quincaillerie',
+    'Téléphones & Accessoires',
     'Vente au marché',
-    'Autre',
+    'Autre activité',
   ];
   final _phone = TextEditingController();
   final _name = TextEditingController();

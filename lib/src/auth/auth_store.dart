@@ -26,11 +26,13 @@ class LocalAccount {
     required this.phoneNumber,
     required this.fullName,
     required this.businessName,
+    this.businessType = 'Boutique / Alimentation',
     this.businessAddress,
   });
   final String phoneNumber;
   final String fullName;
   final String businessName;
+  final String businessType;
   final String? businessAddress;
 }
 
