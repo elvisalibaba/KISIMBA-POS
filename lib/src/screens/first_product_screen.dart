@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../auth/auth_store.dart';
-import 'pro_workspace_screen.dart';
+import 'business_workspace_screen.dart';
 
 class FirstProductScreen extends StatelessWidget {
   const FirstProductScreen({super.key, required this.account});
@@ -60,7 +60,7 @@ class FirstProductScreen extends StatelessWidget {
                 FilledButton.icon(
                   onPressed: () => Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(
-                      builder: (_) => ProWorkspaceScreen(
+                      builder: (_) => BusinessWorkspaceScreen(
                         account: account,
                         startWithProductForm: true,
                       ),
