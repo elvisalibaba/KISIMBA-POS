@@ -29,6 +29,7 @@ class LocalAuthStore implements AuthStore {
       phoneNumber: json['phone_number'] as String,
       fullName: json['full_name'] as String,
       businessName: json['business_name'] as String,
+      businessType: json['business_type'] as String? ?? 'Boutique / Alimentation',
       businessAddress: json['business_address'] as String?,
     );
   }
@@ -50,6 +51,7 @@ class LocalAuthStore implements AuthStore {
       phoneNumber: normalized,
       fullName: data.fullName.trim(),
       businessName: data.businessName.trim(),
+      businessType: data.businessType,
       businessAddress: [data.neighborhood, data.commune, data.city]
           .whereType<String>()
           .where((value) => value.trim().isNotEmpty)
@@ -62,7 +64,7 @@ class LocalAuthStore implements AuthStore {
         'full_name': result.fullName,
         'business_name': result.businessName,
         'business_address': result.businessAddress,
-        'business_type': data.businessType,
+        'business_type': result.businessType,
         'city': data.city,
         'commune': data.commune,
         'neighborhood': data.neighborhood,
